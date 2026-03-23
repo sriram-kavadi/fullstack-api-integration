@@ -12,8 +12,8 @@ function App() {
   const fetchApi=async ()=>{
     try{
       const [res1, res2] = await Promise.all([
-        axios.get("/api"),
-        axios.get("/hey")
+        axios.get("https://fullstack-api-integration.onrender.com/api"),
+        axios.get("https://fullstack-api-integration.onrender.com/hey")
       ]);
       console.log(res1.data.fruits);
       setData(res1.data.fruits);
