@@ -2,7 +2,7 @@ const express=require("express");
 
 const app=express();
 
-const port=9999;
+const port=process.env.PORT||9999;
 
 const cors=require("cors")
 const corsOptions={
