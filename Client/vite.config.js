@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "http://localhost:9999",
-      "/hey": "http://localhost:9999"
+      "/api": "https://fullstack-api-integration.onrender.com/",
+      "/hey": "https://fullstack-api-integration.onrender.com/"
     }
   }
 })
