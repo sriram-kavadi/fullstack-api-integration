@@ -8,7 +8,7 @@ const cors=require("cors")
 const corsOptions={
     origin:"https://fullstack-api-integration-1.onrender.com"
 };
-app.use(cors(corsOptions));
+app.use(cors()); // simple & correct for now
 app.use(express.json());
 app.get("/api",(req,res)=>{
     res.json({fruits:["apple","banana","orange"]})
