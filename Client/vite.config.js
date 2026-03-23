@@ -6,8 +6,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "https://fullstack-api-integration.onrender.com/",
-      "/hey": "https://fullstack-api-integration.onrender.com/"
+      "/api": {
+        target: "https://fullstack-api-integration.onrender.com",
+        changeOrigin: true,
+        secure: true,
+      },
+      "/hey": {
+        target: "https://fullstack-api-integration.onrender.com",
+        changeOrigin: true,
+        secure: true,
+      }
     }
   }
 })

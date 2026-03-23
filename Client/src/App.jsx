@@ -11,11 +11,13 @@ function App() {
 
   const fetchApi=async ()=>{
     try{
-      const requestData=await axios.get("/api");
-      const requestData1=await axios.get("/hey");
-      console.log(requestData.data.fruits);
-      setData(requestData.data.fruits);
-      console.log(requestData1.data.check)
+      const [res1, res2] = await Promise.all([
+        axios.get("/api"),
+        axios.get("/hey")
+      ]);
+      console.log(res1.data.fruits);
+      setData(res1.data.fruits);
+      console.log(res2.data.check)
     }catch(err){
       console.log(err);
     }
